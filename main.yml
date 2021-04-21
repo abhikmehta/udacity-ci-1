@@ -1,0 +1,13 @@
+---
+ - name: Print env variable
+   shell: echo $PATH
+   register: print_result
+
+ - name: print message
+   debug:
+     msg: "{{ print_result.stdout_lines }}"git 
+ - name: Exercise #1
+   hosts: localhost
+
+   roles:
+    - print
